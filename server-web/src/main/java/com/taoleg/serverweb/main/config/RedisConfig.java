@@ -1,6 +1,6 @@
 package com.taoleg.serverweb.main.config;
 
-import org.apache.log4j.Logger;
+import org.jboss.logging.Logger;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,13 +17,12 @@ public class RedisConfig {
     @Bean  
     @ConfigurationProperties(prefix="spring.redis")
     public JedisPoolConfig getRedisConfig(){
-        JedisPoolConfig config = new JedisPoolConfig();
-        return config;  
+        return new JedisPoolConfig();
     }  
       
     @Bean
     @ConfigurationProperties(prefix="spring.redis")  
-    public JedisConnectionFactory getConnectionFactory(){  
+    public JedisConnectionFactory getConnectionFactory(){
         JedisConnectionFactory factory = new JedisConnectionFactory();  
         JedisPoolConfig config = getRedisConfig();  
         factory.setPoolConfig(config);  

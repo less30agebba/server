@@ -28,8 +28,8 @@ import java.util.Map;
 @RequestMapping("/manager/auth")
 public class AuthController extends BaseController {
 
-    @Autowired
-    private AuthService authService;
+//    @Autowired
+//    private AuthService authService;
 
     @RequestMapping("/login")
     public ResponseAdminLogin login(@RequestBody ResquestLogin request, HttpServletResponse reponse) {

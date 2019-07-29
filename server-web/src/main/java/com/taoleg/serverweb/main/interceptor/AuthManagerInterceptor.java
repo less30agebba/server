@@ -2,6 +2,7 @@ package com.taoleg.serverweb.main.interceptor;
 
 import com.taoleg.servercore.common.base.BaseResponse;
 import com.taoleg.servercore.common.base.Constant;
+import com.taoleg.servercore.common.base.RedisClient;
 import com.taoleg.servercore.common.base.ResponseCode;
 import com.taoleg.servercore.common.entity.AdminUserEntity;
 import com.taoleg.servercore.common.utils.CookieUtils;
@@ -24,7 +25,7 @@ public class AuthManagerInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
 
-        String accessToken = CookieUtils.getCookieValue(request, ConstantAgent.CONTEXT_COOKIE_ACCESS_TOKEN_NAME);
+        String accessToken = CookieUtils.getCookieValue(request, Constant.CONTEXT_COOKIE_ACCESS_TOKEN_NAME);
         if (StringUtils.isEmpty(accessToken)) {
             BaseResponse baseResponse = new BaseResponse();
             baseResponse.setCode(ResponseCode.UNAUTHORIZED_LOGIN.getCode());
@@ -34,7 +35,7 @@ public class AuthManagerInterceptor extends HandlerInterceptorAdapter {
         }
 
         RedisClient redis = SpringUtils.getBean(RedisClient.class);
-        String token = RedisConstant.LOGIN_ADMIN_TOKEN_PREFIX + accessToken;
+        String token = Constant.LOGIN_ADMIN_TOKEN_PREFIX + accessToken;
         ContextHelper.set(Constant.CONTEXT_USER_TOKEN, accessToken);
 
         AdminUserEntity user = redis.get(token, AdminUserEntity.class);

@@ -2,10 +2,12 @@ package com.taoleg.serverweb.main.interceptor;
 
 import com.taoleg.servercore.common.base.BaseResponse;
 import com.taoleg.servercore.common.base.Constant;
+import com.taoleg.servercore.common.base.RedisClient;
 import com.taoleg.servercore.common.base.ResponseCode;
 import com.taoleg.servercore.common.entity.AgentUserEntity;
 import com.taoleg.servercore.common.utils.CookieUtils;
 import com.taoleg.servercore.common.utils.ResponseUtils;
+import com.taoleg.servercore.common.utils.SpringUtils;
 import com.taoleg.servercore.main.helper.ContextHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -30,8 +32,8 @@ public class AuthConsumerInterceptor extends HandlerInterceptorAdapter {
             ResponseUtils.writeJson(response, baseResponse);
             return false;
         }
-        String token = RedisConstant.LOGIN_TOKEN_PREFIX + accessToken;
-        ContextHelper.set(ConstantAgent.CONTEXT_USER_TOKEN, token);
+        String token = Constant.LOGIN_TOKEN_PREFIX + accessToken;
+        ContextHelper.set(Constant.CONTEXT_USER_TOKEN, token);
         RedisClient redis = SpringUtils.getBean(RedisClient.class);
         AgentUserEntity user = redis.get(token, AgentUserEntity.class);
         if (user == null) {//给前端返回[未登录]的状态码

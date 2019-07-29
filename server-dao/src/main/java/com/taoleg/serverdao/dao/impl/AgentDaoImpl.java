@@ -1,5 +1,6 @@
 package com.taoleg.serverdao.dao.impl;
 
+import com.taoleg.servercore.common.base.BaseDaoImpl;
 import com.taoleg.servercore.common.base.page.Page;
 import com.taoleg.servercore.common.base.page.Pager;
 import com.taoleg.servercore.common.entity.AgentImgEntity;

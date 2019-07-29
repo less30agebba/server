@@ -1,6 +1,6 @@
 package com.taoleg.serverweb.common.api.auth;
 
-import com.pengpenghuyu.supportplat.common.base.ResponseBean;
+import com.taoleg.servercore.common.base.ResponseBean;
 import lombok.Data;
 
 import java.io.Serializable;

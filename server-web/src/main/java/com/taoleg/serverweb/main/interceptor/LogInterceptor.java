@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.taoleg.servercore.common.apilog.LogMeta;
 import com.taoleg.servercore.common.base.Constant;
 import com.taoleg.servercore.common.signatrue.Signature;
+import com.taoleg.servercore.common.utils.IpUtils;
 import com.taoleg.servercore.main.helper.ContextHelper;
 import com.taoleg.serverweb.main.common.BodyReaderHttpServletRequestWrapper;
 import org.apache.commons.lang3.StringUtils;
@@ -65,15 +66,15 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
             signature = new Signature().parse(signatureStr);
         }
         LogMeta log = new LogMeta();
-        log.setRequest(ContextHelper.getString(LogConstant.REQUEST_JSON));
-        log.setResponse(ContextHelper.getString(LogConstant.RESPONSE_JSON));
+        log.setRequest(ContextHelper.getString(Constant.REQUEST_JSON));
+        log.setResponse(ContextHelper.getString(Constant.RESPONSE_JSON));
         log.setRequestIP(IpUtils.getIpAddress(request));
         log.setResponseIP();
         log.setObj(path);
         log.setServiceId(signature.getServiceId());
-        log.setRequestTime(ContextHelper.getLong(LogConstant.REQUEST_TIME));
+        log.setRequestTime(ContextHelper.getLong(Constant.REQUEST_TIME));
         log.setResponseTime(System.currentTimeMillis());
-        log.setDuration((ContextHelper.getLong(LogConstant.REQUEST_TIME) - System.currentTimeMillis()));
+        log.setDuration((ContextHelper.getLong(Constant.REQUEST_TIME) - System.currentTimeMillis()));
 
         //将请求和返回数据放在日志中
         monitorLogger.info(log.toString());

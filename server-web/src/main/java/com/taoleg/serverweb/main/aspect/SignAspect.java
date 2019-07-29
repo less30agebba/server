@@ -2,6 +2,7 @@ package com.taoleg.serverweb.main.aspect;
 
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSON;
+import com.taoleg.servercore.common.signatrue.Signature;
 import com.taoleg.servercore.common.signatrue.SignatureExecutor;
 import com.taoleg.serverweb.main.common.BodyReaderHttpServletRequestWrapper;
 import org.slf4j.Logger;
@@ -38,7 +39,7 @@ public class SignAspect {
     @Autowired
     private SignatureExecutor signatureExecutor;
 
-    @Pointcut("@annotation(com.pengpenghuyu.supportplat.common.signature.annotation.SignSecret)")
+    @Pointcut("@annotation(com.taoleg.servercore.common.signatrue.annotation.SignSecret)")
     public void signAspect() {
     }
 

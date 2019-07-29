@@ -19,13 +19,13 @@
 
     <properties>
         <java.version>12</java.version>
-        <version.hibernate>5.4.3.Final</version.hibernate>
+        <version.hibernate>5.3.10.Final</version.hibernate>
         <version.fastjson>1.2.58</version.fastjson>
         <version.druid>1.1.19</version.druid>
         <version.lombok>1.18.8</version.lombok>
         <version.httpclient>4.5.9</version.httpclient>
         <version.httpcore>4.4.11</version.httpcore>
-        <version.lang3>3.9</version.lang3>
+        <version.lang3>3.8.1</version.lang3>
     </properties>
 
     <dependencies>
@@ -40,6 +40,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.19</version>
+        </dependency>
+
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>2.1.6.RELEASE</version>
         </dependency>
 
         <dependency>

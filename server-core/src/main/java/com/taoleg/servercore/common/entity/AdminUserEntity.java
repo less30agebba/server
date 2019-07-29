@@ -16,6 +16,7 @@ public class AdminUserEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String username;
     private String realname;

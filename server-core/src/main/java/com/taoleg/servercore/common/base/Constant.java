@@ -45,4 +45,7 @@ public class Constant {
      */
     public static final String CONTEXT_COOKIE_AGENT_ACCESS_TOKEN_NAME = "agent_accessToken_";
 
+    public static final String LOGIN_ADMIN_TOKEN_PREFIX = "LOGIN_ADMIN_";
+
+    public static final String LOGIN_TOKEN_PREFIX = "LOGIN_";
 }

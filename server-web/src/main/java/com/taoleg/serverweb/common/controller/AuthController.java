@@ -19,11 +19,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-;
-
-/**
- * Restful API Auth
- */
 @RestController("ManagerAuthController")
 @RequestMapping("/manager/auth")
 public class AuthController extends BaseController {

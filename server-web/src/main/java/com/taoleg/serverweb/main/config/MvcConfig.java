@@ -46,9 +46,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(new AuthConsumerInterceptor())
                 .addPathPatterns("/consumer/**")
                 .excludePathPatterns("/consumer/auth/**/login")
+                .excludePathPatterns("/consumer/index/getGoods")
                 .excludePathPatterns("/consumer/auth/**/logout")
                 .excludePathPatterns("/consumer/auth/**/forgetPassword")
-                .excludePathPatterns("/consumer/auth/**/vcode/username")
                 .excludePathPatterns("/consumer/auth/**/user/exists");
     }
 }

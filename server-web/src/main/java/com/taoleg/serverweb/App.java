@@ -24,7 +24,7 @@ import javax.servlet.ServletException;
 @EnableScheduling
 @EnableAutoConfiguration
 @ServletComponentScan
-@ComponentScan(basePackages = {"com.taoleg.serverweb.common", "com.taoleg.*.common"})
+@ComponentScan(basePackages = {"com.taoleg.serverweb.common", "com.taoleg.*.common", "com.taoleg.serverweb.consumer", "com.taoleg.**.service"})
 public class App extends SpringBootServletInitializer {
 
     @Autowired

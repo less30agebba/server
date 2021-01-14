@@ -22,7 +22,7 @@
         <version.spring-test>5.1.8.RELEASE</version.spring-test>
         <version.starter-test>2.1.6.RELEASE</version.starter-test>
         <version.junit>4.13-beta-3</version.junit>
-        <version.poi>3.7</version.poi>
+        <version.poi>3.17</version.poi>
         <version.context>1.2.6</version.context>
     </properties>
 

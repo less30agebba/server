@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>12</java.version>
-        <version.hibernate>5.3.10.Final</version.hibernate>
+        <version.hibernate>5.4.24.Final</version.hibernate>
         <version.fastjson>1.2.58</version.fastjson>
         <version.druid>1.1.19</version.druid>
         <version.junit>4.13-beta-3</version.junit>

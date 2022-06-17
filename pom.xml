@@ -20,7 +20,7 @@
     <properties>
         <java.version>12</java.version>
         <version.hibernate>5.3.10.Final</version.hibernate>
-        <version.fastjson>1.2.58</version.fastjson>
+        <version.fastjson>1.2.83</version.fastjson>
         <version.druid>1.1.19</version.druid>
         <version.lombok>1.18.8</version.lombok>
         <version.httpclient>4.5.9</version.httpclient>

@@ -18,7 +18,7 @@
         <java.version>12</java.version>
         <version.hibernate>5.3.10.Final</version.hibernate>
         <start-class>com.taoleg.serverweb.App</start-class>
-        <version.mysql>8.0.16</version.mysql>
+        <version.mysql>8.0.28</version.mysql>
         <version.aspectjrt>1.9.4</version.aspectjrt>
         <version.starter-test>2.1.6.RELEASE</version.starter-test>
         <version.starter-data-jpa>2.1.6.RELEASE</version.starter-data-jpa>

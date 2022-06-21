@@ -19,7 +19,7 @@
         <version.fastjson>1.2.58</version.fastjson>
         <version.druid>1.1.19</version.druid>
         <version.starter-test>2.1.6.RELEASE</version.starter-test>
-        <version.mysql>8.0.16</version.mysql>
+        <version.mysql>8.0.28</version.mysql>
     </properties>
 
     <dependencies>

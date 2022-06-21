@@ -22,7 +22,7 @@
         <version.junit>4.13-beta-3</version.junit>
         <version.jdbc>2.1.6.RELEASE</version.jdbc>
         <version.starter-test>2.1.6.RELEASE</version.starter-test>
-        <version.mysql>8.0.16</version.mysql>
+        <version.mysql>8.0.28</version.mysql>
         <version.boot-devtools>2.1.6.RELEASE</version.boot-devtools>
     </properties>
 
